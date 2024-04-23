@@ -23,7 +23,7 @@ function Signup() {
         password:data.password
       } 
     try{
-      const response = await fetch("http://localhost:3000/signup/new/user",{
+      const response = await fetch("https://todobackend-suuw.onrender.com/signup/new/user",{
         method:"POST",
         headers:{ 'Content-Type': 'application/json'},
         body: JSON.stringify(newUser)

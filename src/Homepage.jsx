@@ -19,7 +19,7 @@ function Homepage(props) {
       }
     // const userId = user._id;
     console.log("Fetching data for user:", user);
-    const response = await fetch(`http://localhost:3000/api/get/data/${user._id}`);
+    const response = await fetch(`https://todobackend-suuw.onrender.com/api/get/data/${user._id}`);
     const data = await response.json();
     console.log(data);
     
@@ -41,7 +41,7 @@ async function submitTask(){
   settask("");
   try{
   const userId = user._id;
-  const response = await fetch(`http://localhost:3000/api/task/data/${userId}`,{
+  const response = await fetch(`https://todobackend-suuw.onrender.com/api/task/data/${userId}`,{
     method: "POST",
     headers:{ 'Content-Type': 'application/json'},
     body: JSON.stringify(dataToSend)
@@ -61,7 +61,7 @@ async function submitTask(){
 async function deleteBtn(id){
     const sendId = {taskId: id};
   try{
-      const response = await fetch("http://localhost:3000/delete/task",{
+      const response = await fetch("https://todobackend-suuw.onrender.com/delete/task",{
         method:"DELETE",
         headers:{ 'Content-Type': 'application/json'},
         body: JSON.stringify(sendId)

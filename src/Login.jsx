@@ -22,7 +22,7 @@ function Login() {
       password:data.password
     } 
   try{
-    const response = await fetch("http://localhost:3000/user/login",{
+    const response = await fetch("https://todobackend-suuw.onrender.com/user/login",{
       method:"POST",
       headers:{ 'Content-Type': 'application/json'},
       body: JSON.stringify(user)
