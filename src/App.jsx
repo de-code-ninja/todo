@@ -38,7 +38,7 @@ function App() {
     <AuthProvider>
   <>
       
-      <RouterProvider router={router} />
+      hello world
      
       <Footer/>
     </>
