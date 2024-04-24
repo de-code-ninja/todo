@@ -37,8 +37,9 @@ function App() {
   return (
     <AuthProvider>
   <>
- 
-  <Signup/>
+
+      <Homepage/>
+      
      
       <Footer/>
     </>
