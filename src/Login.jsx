@@ -28,22 +28,22 @@ function Login() {
       body: JSON.stringify(user)
     })
     if (response.ok) {
-      console.log("data sent successfully");
+     
     const userData = await response.json()
-    console.log(userData);
+    
     signIn(userData)
     navigate("/");
   } else {
     const userData = await response.json()
-    console.log(userData);
+   
     setError("submitErr",{message:userData.error})
-      console.error("Failed to send data");
+      
     }
 }
 catch(err){
       console.log(err);
 }
-    console.log(data);
+   
   }
   
   return (
@@ -109,7 +109,7 @@ catch(err){
               disabled={isSubmitting}
               className="flex w-full justify-center rounded-md bg-amber-400 px-3 py-1.5 text-sm font-semibold leading-6 text-black shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
             >
-              Sign in
+               {isSubmitting?"Signing in...":"Sign in"}
             </button>
             {errors.submitErr && <div className='text-red-600 bg-red mt-2'>{errors.submitErr.message}</div>}
           </div>
