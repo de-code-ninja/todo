@@ -37,7 +37,8 @@ function App() {
   return (
     <AuthProvider>
   <>
-      
+
+      <Homepage/></>
       hello world
      
       <Footer/>
